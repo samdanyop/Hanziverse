@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hanziverse is a 3D Chinese language-learning universe with HSK vocabulary libraries, video lessons, and drama watch paths."
+    />
+    <title>Hanziverse | 3D HSK Chinese Learning Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="HSK level navigation">
+        <a class="brand" href="#top" aria-label="Hanziverse home">
+          <span class="brand-mark">汉</span>
+          <span>
+            Hanziverse
+            <small>3D Mandarin Lab</small>
+          </span>
+        </a>
+
+        <button class="sidebar-toggle" type="button" aria-expanded="false" aria-controls="level-navigation">
+          Browse HSK levels
+        </button>
+
+        <nav class="level-nav" id="level-navigation">
+          <p class="nav-label">HSK Pathway</p>
+          <a class="level-link is-active" href="#hsk-1" data-level="1"><span>HSK 1</span><small>150 words</small></a>
+          <a class="level-link" href="#hsk-2" data-level="2"><span>HSK 2</span><small>300 words</small></a>
+          <a class="level-link" href="#hsk-3" data-level="3"><span>HSK 3</span><small>600 words</small></a>
+          <a class="level-link" href="#hsk-4" data-level="4"><span>HSK 4</span><small>1,200 words</small></a>
+          <a class="level-link" href="#hsk-5" data-level="5"><span>HSK 5</span><small>2,500 words</small></a>
+          <a class="level-link" href="#hsk-6" data-level="6"><span>HSK 6</span><small>5,000+ words</small></a>
+        </nav>
+
+        <div class="sidebar-card">
+          <strong>Daily orbit</strong>
+          <p>Finish one lesson, one vocabulary deck, and one graded clip to keep your streak alive.</p>
+        </div>
+      </aside>
+
+      <main id="top" class="content">
+        <section class="hero-grid" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Interactive Chinese learning</p>
+            <h1 id="hero-title">Explore Mandarin through a 3D HSK universe.</h1>
+            <p class="hero-text">
+              Hanziverse combines a Three.js learning world, organized HSK vocabulary libraries,
+              video lessons, and level-matched drama watch paths so learners can study, listen,
+              read, and explore from one responsive dashboard.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#vocabulary">Open vocabulary library</a>
+              <a class="button secondary" href="#watch-library">Find shows to watch</a>
+            </div>
+          </div>
+
+          <div class="universe-panel" aria-label="3D Hanziverse learning environment">
+            <canvas id="hanziverse-canvas"></canvas>
+            <div class="canvas-overlay">
+              <span>Current orbit</span>
+              <strong id="active-level-label">HSK 1</strong>
+              <small>Click HSK levels to shift the 3D world.</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-row" aria-label="Learning dashboard statistics">
+          <article><strong>6</strong><span>HSK levels</span></article>
+          <article><strong>36</strong><span>starter vocabulary cards</span></article>
+          <article><strong>4</strong><span>video lesson placeholders</span></article>
+          <article><strong>6</strong><span>drama watch links</span></article>
+        </section>
+
+        <section class="section-block" id="vocabulary" aria-labelledby="vocab-title">
+          <div class="section-heading">
+            <p class="eyebrow">Vocabulary library</p>
+            <h2 id="vocab-title">Organized vocabulary decks for every HSK level.</h2>
+            <p>
+              Each level includes starter words with simplified Chinese, pinyin, meaning,
+              and a quick context phrase. Use the sidebar or filters to jump between levels.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="list" aria-label="Vocabulary level filters">
+            <button class="filter-button is-active" type="button" data-filter="all">All levels</button>
+            <button class="filter-button" type="button" data-filter="1">HSK 1</button>
+            <button class="filter-button" type="button" data-filter="2">HSK 2</button>
+            <button class="filter-button" type="button" data-filter="3">HSK 3</button>
+            <button class="filter-button" type="button" data-filter="4">HSK 4</button>
+            <button class="filter-button" type="button" data-filter="5">HSK 5</button>
+            <button class="filter-button" type="button" data-filter="6">HSK 6</button>
+          </div>
+
+          <div class="vocabulary-grid">
+            <article class="level-section" id="hsk-1" data-level="1">
+              <div class="level-heading"><span>HSK 1</span><h3>First conversations</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>你好</strong><em>nǐ hǎo</em><span>hello</span><small>你好，我叫安娜。</small></div>
+                <div class="word-card"><strong>谢谢</strong><em>xièxie</em><span>thanks</span><small>谢谢你的帮助。</small></div>
+                <div class="word-card"><strong>学习</strong><em>xuéxí</em><span>to study</span><small>我学习中文。</small></div>
+                <div class="word-card"><strong>朋友</strong><em>péngyou</em><span>friend</span><small>他是我的朋友。</small></div>
+                <div class="word-card"><strong>水</strong><em>shuǐ</em><span>water</span><small>我想喝水。</small></div>
+                <div class="word-card"><strong>今天</strong><em>jīntiān</em><span>today</span><small>今天很忙。</small></div>
+              </div>
+            </article>
+
+            <article class="level-section" id="hsk-2" data-level="2">
+              <div class="level-heading"><span>HSK 2</span><h3>Daily routines</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>旅游</strong><em>lǚyóu</em><span>travel</span><small>我喜欢去中国旅游。</small></div>
+                <div class="word-card"><strong>运动</strong><em>yùndòng</em><span>exercise</span><small>周末我常运动。</small></div>
+                <div class="word-card"><strong>教室</strong><em>jiàoshì</em><span>classroom</span><small>老师在教室里。</small></div>
+                <div class="word-card"><strong>准备</strong><em>zhǔnbèi</em><span>prepare</span><small>我准备考试。</small></div>
+                <div class="word-card"><strong>外面</strong><em>wàimiàn</em><span>outside</span><small>外面下雨了。</small></div>
+                <div class="word-card"><strong>生日</strong><em>shēngrì</em><span>birthday</span><small>祝你生日快乐。</small></div>
+              </div>
+            </article>
+
+            <article class="level-section" id="hsk-3" data-level="3">
+              <div class="level-heading"><span>HSK 3</span><h3>Stories and opinions</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>当然</strong><em>dāngrán</em><span>of course</span><small>当然可以。</small></div>
+                <div class="word-card"><strong>环境</strong><em>huánjìng</em><span>environment</span><small>这里的环境很好。</small></div>
+                <div class="word-card"><strong>决定</strong><em>juédìng</em><span>decide</span><small>我决定明天去。</small></div>
+                <div class="word-card"><strong>故事</strong><em>gùshi</em><span>story</span><small>这个故事很有意思。</small></div>
+                <div class="word-card"><strong>健康</strong><em>jiànkāng</em><span>health</span><small>运动对健康好。</small></div>
+                <div class="word-card"><strong>需要</strong><em>xūyào</em><span>need</span><small>你需要帮忙吗？</small></div>
+              </div>
+            </article>
+
+            <article class="level-section" id="hsk-4" data-level="4">
+              <div class="level-heading"><span>HSK 4</span><h3>Work and culture</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>经验</strong><em>jīngyàn</em><span>experience</span><small>她有很多工作经验。</small></div>
+                <div class="word-card"><strong>文化</strong><em>wénhuà</em><span>culture</span><small>我想了解中国文化。</small></div>
+                <div class="word-card"><strong>保证</strong><em>bǎozhèng</em><span>guarantee</span><small>我保证准时到。</small></div>
+                <div class="word-card"><strong>适合</strong><em>shìhé</em><span>suitable</span><small>这本书适合你。</small></div>
+                <div class="word-card"><strong>解释</strong><em>jiěshì</em><span>explain</span><small>请解释一下。</small></div>
+                <div class="word-card"><strong>任务</strong><em>rènwu</em><span>task</span><small>今天的任务完成了。</small></div>
+              </div>
+            </article>
+
+            <article class="level-section" id="hsk-5" data-level="5">
+              <div class="level-heading"><span>HSK 5</span><h3>Advanced media</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>成就</strong><em>chéngjiù</em><span>achievement</span><small>这是很大的成就。</small></div>
+                <div class="word-card"><strong>现象</strong><em>xiànxiàng</em><span>phenomenon</span><small>这个现象很普遍。</small></div>
+                <div class="word-card"><strong>效率</strong><em>xiàolǜ</em><span>efficiency</span><small>我们要提高效率。</small></div>
+                <div class="word-card"><strong>观点</strong><em>guāndiǎn</em><span>viewpoint</span><small>你的观点很清楚。</small></div>
+                <div class="word-card"><strong>采访</strong><em>cǎifǎng</em><span>interview</span><small>记者采访了演员。</small></div>
+                <div class="word-card"><strong>承担</strong><em>chéngdān</em><span>undertake</span><small>他承担了责任。</small></div>
+              </div>
+            </article>
+
+            <article class="level-section" id="hsk-6" data-level="6">
+              <div class="level-heading"><span>HSK 6</span><h3>Native-level expression</h3></div>
+              <div class="word-grid">
+                <div class="word-card"><strong>潜移默化</strong><em>qiányí mòhuà</em><span>subtle influence</span><small>文化会潜移默化地影响人。</small></div>
+                <div class="word-card"><strong>名副其实</strong><em>míngfù qíshí</em><span>worthy of the name</span><small>她名副其实是专家。</small></div>
+                <div class="word-card"><strong>维持</strong><em>wéichí</em><span>maintain</span><small>我们要维持秩序。</small></div>
+                <div class="word-card"><strong>趋势</strong><em>qūshì</em><span>trend</span><small>这个趋势很明显。</small></div>
+                <div class="word-card"><strong>阐述</strong><em>chǎnshù</em><span>elaborate</span><small>请阐述你的想法。</small></div>
+                <div class="word-card"><strong>不可思议</strong><em>bùkěsīyì</em><span>incredible</span><small>这个结果不可思议。</small></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block media-grid" id="videos" aria-labelledby="video-title">
+          <div class="section-heading compact">
+            <p class="eyebrow">Video library</p>
+            <h2 id="video-title">Guided video lessons by skill and level.</h2>
+            <p>Use short lesson placeholders for pronunciation, grammar, listening, and reading drills.</p>
+          </div>
+          <div class="video-library">
+            <article class="video-card"><span>HSK 1 · Tones</span><h3>Master the four tones</h3><p>Practice tone pairs with animated pitch lines and repeat-after-me drills.</p><button type="button">Preview lesson</button></article>
+            <article class="video-card"><span>HSK 2 · Listening</span><h3>Ordering food naturally</h3><p>Hear restaurant conversations at slow, medium, and natural speed.</p><button type="button">Preview lesson</button></article>
+            <article class="video-card"><span>HSK 3 · Grammar</span><h3>把 structure in action</h3><p>Learn how word order changes meaning with visual sentence blocks.</p><button type="button">Preview lesson</button></article>
+            <article class="video-card"><span>HSK 4 · Reading</span><h3>Read a short news story</h3><p>Break down authentic-style paragraphs with key vocabulary callouts.</p><button type="button">Preview lesson</button></article>
+          </div>
+        </section>
+
+        <section class="section-block" id="watch-library" aria-labelledby="watch-title">
+          <div class="section-heading">
+            <p class="eyebrow">Watch library</p>
+            <h2 id="watch-title">Drama and media paths classified by HSK level.</h2>
+            <p>
+              These placeholders are designed for learners to connect study goals with external
+              watching platforms. Replace the sample links with licensed streaming, trailer, or
+              course pages when your content plan is ready.
+            </p>
+          </div>
+          <div class="watch-grid">
+            <article class="watch-card"><span>HSK 1-2</span><h3>Slice-of-life beginner clips</h3><p>Short everyday scenes with greetings, numbers, food, and family vocabulary.</p><a href="https://www.youtube.com/results?search_query=beginner+chinese+drama+clips" target="_blank" rel="noreferrer">Open placeholder</a></article>
+            <article class="watch-card"><span>HSK 2-3</span><h3>Campus romance starters</h3><p>Light dialogue for school, hobbies, weather, invitations, and feelings.</p><a href="https://www.youtube.com/results?search_query=chinese+campus+drama+clips" target="_blank" rel="noreferrer">Open placeholder</a></article>
+            <article class="watch-card"><span>HSK 3-4</span><h3>Family sitcom scenes</h3><p>Natural speed conversations about daily problems, opinions, and plans.</p><a href="https://www.viki.com/categories/country/china/genre/romantic-comedy" target="_blank" rel="noreferrer">Open placeholder</a></article>
+            <article class="watch-card"><span>HSK 4-5</span><h3>Workplace drama route</h3><p>Practice career vocabulary, persuasion, meetings, and professional relationships.</p><a href="https://www.iq.com/album-list?channel_id=2" target="_blank" rel="noreferrer">Open placeholder</a></article>
+            <article class="watch-card"><span>HSK 5</span><h3>Historical drama route</h3><p>Build tolerance for formal speech, idioms, honorifics, and narrative exposition.</p><a href="https://www.viki.com/categories/country/china/genre/historical" target="_blank" rel="noreferrer">Open placeholder</a></article>
+            <article class="watch-card"><span>HSK 6</span><h3>News and documentary route</h3><p>Challenge yourself with abstract topics, commentary, interviews, and fast narration.</p><a href="https://www.youtube.com/results?search_query=mandarin+documentary+chinese+subtitles" target="_blank" rel="noreferrer">Open placeholder</a></article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
